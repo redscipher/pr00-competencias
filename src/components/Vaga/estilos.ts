@@ -20,7 +20,6 @@ const VagaItem = styled.li`
       color: var(--cor-principal);
     }
   }
-}
 `
 
 const VagaTitulo = styled.h3`
