@@ -30,16 +30,15 @@ const Heroi = styled.form`
     height: auto;
     padding: 24px 0;
   }
-}
 `
+
 const TituloHeroi = styled.h2`
   font-family: Gloock, serif;
   font-size: 48px;
 
   @media (max-width: 768px) {
-      font-size: 32px;
+    font-size: 32px;
   }
-}
 `
 
 // exportacoes
