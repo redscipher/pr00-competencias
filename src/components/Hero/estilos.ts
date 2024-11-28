@@ -8,7 +8,7 @@ const Heroi = styled.form`
   width: 100%;
   background-image: url(${fundo});
   background-size: cover;
-  object-fit: cover;
+  object-fit: contain;
   position: relative;
   display: flex;
   flex-direction: column;
