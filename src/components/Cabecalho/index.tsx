@@ -3,7 +3,7 @@ import Cab from './estilos'
 
 const Cabecalho = () => (
   <Cab>
-    <h1>EBAC Jobs</h1>
+    <h1>Áreas de Conhecimento</h1>
   </Cab>
 )
 
