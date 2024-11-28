@@ -35,7 +35,7 @@ const Heroi = styled.form`
 const TituloHeroi = styled.h2`
   font-family: Gloock, serif;
   font-size: 48px;
-  margin-right: 32px;
+  margin-left: 32px;
 
   @media (max-width: 768px) {
     font-size: 32px;
