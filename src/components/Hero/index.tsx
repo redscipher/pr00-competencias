@@ -1,9 +1,14 @@
 import Heroi, { TituloHeroi } from './estilos'
 
-const Hero = () => (
+type props = {
+  children: JSX.Element
+}
+
+const Hero = ({ children }: props) => (
   <Heroi>
-    <div className="container">
+    <div>
       <TituloHeroi>Áreas de conhecimentos que se tem acesso.</TituloHeroi>
+      {children}
     </div>
   </Heroi>
 )

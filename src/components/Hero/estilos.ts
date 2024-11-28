@@ -1,14 +1,19 @@
 // importacoes
 import styled from 'styled-components'
+// imagens
+import fundo from '../../ativos/calculos.jpg'
 
 const Heroi = styled.form`
-  height: 360px;
+  height: 100%;
   width: 100%;
-  background-image: url('https://cdn.pixabay.com/photo/2018/08/10/15/45/woman-3597101_1280.jpg');
+  background-image: url(${fundo});
   background-size: cover;
+  object-fit: cover;
   position: relative;
   display: flex;
+  flex-direction: column;
   align-items: center;
+  padding-bottom: 120px;
 
   &::before {
     position: absolute;
@@ -36,6 +41,7 @@ const TituloHeroi = styled.h2`
   font-family: Gloock, serif;
   font-size: 48px;
   margin-left: 32px;
+  margin-top: 45px;
 
   @media (max-width: 768px) {
     font-size: 32px;

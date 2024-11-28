@@ -9,19 +9,21 @@ type Props = {
 const FormVagas = ({ aoPesquisar }: Props) => {
   const [termo, setTermo] = useState<string>('')
 
-  const aoEnviarForm = (e: FormEvent<HTMLFormElement>) => {
+  const aoEnviarForm = (e: FormEvent<HTMLButtonElement>) => {
     e.preventDefault()
     aoPesquisar(termo.toLocaleLowerCase())
   }
 
   return (
-    <Formulario onSubmit={aoEnviarForm}>
+    <Formulario>
       <Entrada
-        placeholder="Front-end, fullstack, node, design"
+        placeholder="Digite um termo..."
         onChange={(e) => setTermo(e.target.value)}
         type="search"
       />
-      <Botao type="submit">Pesquisar</Botao>
+      <Botao type="submit" onClick={aoEnviarForm}>
+        Pesquisar
+      </Botao>
     </Formulario>
   )
 }

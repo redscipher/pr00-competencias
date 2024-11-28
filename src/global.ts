@@ -14,10 +14,6 @@ const EstiloGlobal = createGlobalStyle`
     font-family: Lato, sans-serif;
     list-style: none;
   }
-
-  body {
-    padding-bottom: 120px;
-  }
 `
 
 const Container = styled.div`

@@ -8,10 +8,11 @@ function App() {
     <>
       <EstiloGlobal></EstiloGlobal>
       <Header />
-      <Hero />
-      <Container>
-        <ListaVagas />
-      </Container>
+      <Hero>
+        <Container>
+          <ListaVagas />
+        </Container>
+      </Hero>
     </>
   )
 }
