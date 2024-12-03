@@ -6,11 +6,11 @@ import { Competencia } from '../globais'
 // conexao com servidor arquivo .json
 const api = createApi({
   baseQuery: fetchBaseQuery({
-    baseUrl: 'https://rep-arquivos.vercel.app/dados'
+    baseUrl: 'https://rep-arquivos.vercel.app'
   }),
   endpoints: (builder) => ({
     getCompetencias: builder.query<Competencia[], void>({
-      query: () => 'competencias'
+      query: () => 'dados/competencias'
     })
   })
 })
