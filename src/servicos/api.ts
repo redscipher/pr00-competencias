@@ -6,7 +6,7 @@ import { Competencia } from '../globais'
 // conexao com servidor arquivo .json
 const api = createApi({
   baseQuery: fetchBaseQuery({
-    baseUrl: process.env.API_BASE_URL || 'http://localhost:4000'
+    baseUrl: process.env.API_BASE_URL
   }),
   endpoints: (builder) => ({
     getCompetencias: builder.query<Competencia[], void>({
