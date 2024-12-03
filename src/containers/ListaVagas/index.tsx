@@ -22,11 +22,11 @@ const ListaVagas = () => {
   const execRolagem = (evt: React.WheelEvent) => {
     // validacao
     if (evt.deltaY !== 0) {
+      evt.preventDefault()
       // pega o container pai do objeto atual
       const container = evt.currentTarget
       // adiciona rolagem
       container.scrollLeft += evt.deltaY
-      evt.preventDefault()
     }
   }
 
