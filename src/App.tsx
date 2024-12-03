@@ -1,11 +1,20 @@
+// importacoes
+import EstiloGlobal, { Container } from './globais'
+import { configuraStore } from './armazem' // loja
+// componentes
 import Header from './components/Cabecalho'
 import Hero from './components/Hero'
 import ListaVagas from './containers/ListaVagas'
-import EstiloGlobal, { Container } from './global'
+import { Provider } from 'react-redux'
 
+// store redux
+const armazem = configuraStore()
+
+// aplicacao principal
 function App() {
+  // def retorno
   return (
-    <>
+    <Provider store={armazem}>
       <EstiloGlobal></EstiloGlobal>
       <Header />
       <Hero>
@@ -13,8 +22,9 @@ function App() {
           <ListaVagas />
         </Container>
       </Hero>
-    </>
+    </Provider>
   )
 }
 
+// exportacao padrao
 export default App

@@ -1,16 +1,7 @@
+import { Competencia } from '../../globais'
 import VagaItem, { VagaLink, VagaTitulo } from './estilos'
 
-type Props = {
-  titulo: string
-  localizacao: string
-  nivel: string
-  modalidade: string
-  salarioMin: number
-  salarioMax: number
-  requisitos: string[]
-}
-
-const Vaga = (props: Props) => (
+const Vaga = (props: Competencia) => (
   <VagaItem>
     <VagaTitulo>{props.titulo}</VagaTitulo>
     <ul>
