@@ -6,7 +6,7 @@ import { Competencia } from '../globais'
 // conexao com servidor arquivo .json
 const api = createApi({
   baseQuery: fetchBaseQuery({
-    baseUrl: 'https://base-exercicio-css-in-js-khaki.vercel.app:4000'
+    baseUrl: 'https://rep-arquivos.vercel.app/dados'
   }),
   endpoints: (builder) => ({
     getCompetencias: builder.query<Competencia[], void>({
