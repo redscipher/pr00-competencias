@@ -20,11 +20,14 @@ const ListaVagas = () => {
     (x) => x.titulo.toLocaleLowerCase().search(filtro) >= 0
   )
   const execRolagem = (evt: React.WheelEvent) => {
-    // pega o container pai do objeto atual
-    const container = evt.currentTarget
-    // adiciona rolagem
-    container.scrollLeft += evt.deltaY
-    evt.preventDefault()
+    // validacao
+    if (evt.deltaY !== 0) {
+      // pega o container pai do objeto atual
+      const container = evt.currentTarget
+      // adiciona rolagem
+      container.scrollLeft += evt.deltaY
+      evt.preventDefault()
+    }
   }
 
   // validacao
