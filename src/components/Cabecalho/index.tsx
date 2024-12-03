@@ -1,10 +1,15 @@
 // importacoes
-import Cab from './estilos'
+import * as E from './estilos'
 
-const Cabecalho = () => (
-  <Cab>
-    <h1>Áreas de Conhecimento</h1>
-  </Cab>
-)
+// componente
+const Cabecalho = () => {
+  // def retorno
+  return (
+    <E.default>
+      <h1>Áreas de Conhecimento</h1>
+    </E.default>
+  )
+}
 
+// exportacoes
 export default Cabecalho

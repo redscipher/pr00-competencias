@@ -3,13 +3,6 @@ import styled, { createGlobalStyle } from 'styled-components'
 
 // estilos global
 const EstiloGlobal = createGlobalStyle`
-  /* raiz */
-  :root {
-    /* variaveis */
-    --cor-principal: #a7727d;
-    --cor-secundaria: #f9f5e7;
-  }
-
   /* resete */
   * {
     margin: 0;
@@ -19,6 +12,12 @@ const EstiloGlobal = createGlobalStyle`
     list-style: none;
   }
 `
+
+// variaveis: cores
+export const CORES = {
+  principal: '#a7727d',
+  secundaria: '#f9f5e7'
+}
 
 // CSS/SASS
 export const Container = styled.div`

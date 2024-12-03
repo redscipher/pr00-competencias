@@ -1,11 +1,17 @@
 // importa styled
 import styled from 'styled-components'
+// constantes
+import { CORES } from '../../globais'
 
 // cria o componente estilizado
-const Cab = styled.header`
-  background-color: var(--cor-secundaria);
-  color: var(--cor-principal);
+const Cabecalho = styled.header`
+  /* cores */
+  background-color: ${CORES.secundaria};
+  color: ${CORES.principal};
+  /* posicao */
   text-align: center;
+  /* dimensoes */
   padding: 24px 0;
 `
-export default Cab
+// exporta cabecalho
+export default Cabecalho

@@ -3,9 +3,9 @@ import { useState } from 'react'
 // servicos
 import { useGetCompetenciasQuery } from '../../servicos/api'
 // estilos
-import Vagas from './estilos'
+import * as E from './estilos'
 // componentes
-import FormVagas from '../../components/FormVagas'
+import FormVagas from '../../components/Formulario'
 import Vaga from '../../components/Vaga'
 
 // componente
@@ -28,7 +28,7 @@ const ListaVagas = () => {
     return (
       <div>
         <FormVagas aoPesquisar={(termo: string) => setFiltro(termo)} />
-        <Vagas>
+        <E.default>
           {vagasFiltradas?.map((vag) => (
             <Vaga
               key={vag.id}
@@ -42,7 +42,7 @@ const ListaVagas = () => {
               id={vag.id}
             />
           ))}
-        </Vagas>
+        </E.default>
       </div>
     )
   }

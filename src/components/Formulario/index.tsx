@@ -1,30 +1,38 @@
 // importacoes
 import { FormEvent, useState } from 'react'
-import Formulario, { Botao, Entrada } from './estilos'
+// estilos
+import * as E from './estilos'
 
+// tipos: parametros do componente
 type Props = {
   aoPesquisar: (termo: string) => void
 }
 
-const FormVagas = ({ aoPesquisar }: Props) => {
+// componente
+const FormPesquisa = ({ aoPesquisar }: Props) => {
+  // estados
   const [termo, setTermo] = useState<string>('')
 
+  // funcao
   const aoEnviarForm = (e: FormEvent<HTMLButtonElement>) => {
     e.preventDefault()
     aoPesquisar(termo.toLocaleLowerCase())
   }
 
+  // def retorno
   return (
-    <Formulario>
-      <Entrada
+    <E.default>
+      <E.Entrada
         placeholder="Digite um termo..."
         onChange={(e) => setTermo(e.target.value)}
         type="search"
       />
-      <Botao type="submit" onClick={aoEnviarForm}>
+      <E.Botao type="submit" onClick={aoEnviarForm}>
         Pesquisar
-      </Botao>
-    </Formulario>
+      </E.Botao>
+    </E.default>
   )
 }
-export default FormVagas
+
+// exportacao
+export default FormPesquisa

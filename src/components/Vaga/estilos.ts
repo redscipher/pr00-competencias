@@ -1,44 +1,57 @@
 // importacao
 import styled from 'styled-components'
+import { CORES } from '../../globais'
 
 // componentes
 const VagaItem = styled.li`
-  border: 1px solid var(--cor-principal);
-  background-color: var(--cor-secundaria);
-  color: var(--cor-principal);
+  /* cores */
+  border: 1px solid ${CORES.principal};
+  background-color: ${CORES.secundaria};
+  color: ${CORES.principal};
+  /* tamanho */
   padding: 16px;
+  border-radius: 8px; // tamanho do arredondadmento das bordas
+  /* efeitos */
   transition: all ease 0.3s;
-  border-radius: 8px;
 
+  /* estados: mouse em cima */
   &:hover {
-    background-color: var(--cor-principal);
-    color: var(--cor-secundaria);
+    background-color: ${CORES.principal};
+    color: ${CORES.secundaria};
 
+    /* elementos: nivel 1 */
     a {
-      border-color: var(--cor-principal);
-      background-color: var(--cor-secundaria);
-      color: var(--cor-principal);
+      border-color: ${CORES.principal};
+      background-color: ${CORES.secundaria};
+      color: ${CORES.principal};
     }
   }
 `
 
-const VagaTitulo = styled.h3`
+export const VagaTitulo = styled.h3`
   font-weight: bold;
   margin-bottom: 16px;
 `
-const VagaLink = styled.a`
-  border-color: var(--cor-secundaria);
-  background-color: var(--cor-principal);
-  color: var(--cor-secundaria);
+
+export const VagaLink = styled.a`
+  /* cores */
+  border-color: ${CORES.secundaria};
+  background-color: ${CORES.principal};
+  color: ${CORES.secundaria};
+  /* diplay */
   display: inline-block;
-  padding: 8px 16px;
-  text-decoration: none;
+  text-align: center;
+  /* dimensionamento */
   margin-top: 16px;
+  padding: 8px 16px;
+  border-radius: 8px;
+  /* fontes */
   font-weight: bold;
   font-size: 14px;
-  border-radius: 8px;
-  text-align: center;
+  /* estetico */
+  text-decoration: none;
 
+  /* responsividade: smartphone */
   @media (max-width: 768px) {
     display: block;
   }
@@ -46,4 +59,3 @@ const VagaLink = styled.a`
 
 // exportacoes
 export default VagaItem
-export { VagaTitulo, VagaLink }
