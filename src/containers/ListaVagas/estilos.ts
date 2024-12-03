@@ -5,15 +5,35 @@ import styled from 'styled-components'
 const Vagas = styled.ul`
   /* dispaly */
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr; // 3 colunas
+  grid-auto-flow: column;
+  grid-auto-columns: min-content;
   column-gap: 16px;
-  row-gap: 16px;
   /* dimensoes */
   margin-top: 80px;
+  overflow-x: auto;
+  white-space: nowrap;
+  padding-bottom: 8px;
+  /* estetico */
+  cursor: pointer;
 
-  /* responsividade: smartphone */
-  @media (max-width: 768px) {
-    grid-template-columns: 1fr; // troca p/ 1 coluna
+  /* pseudo elementos: barra de rolagem */
+  &::-webkit-scrollbar {
+    margin-top: 32px;
+    height: 8px;
+  }
+
+  /* rastreio */
+  &::-webkit-scrollbar-track {
+    background-color: #f1f1f1;
+  }
+
+  /* polegar */
+  &::-webkit-scrollbar-thumb {
+    background-color: #888;
+
+    &:hover {
+      background-color: #555;
+    }
   }
 `
 

@@ -19,6 +19,13 @@ const ListaVagas = () => {
   const vagasFiltradas = vagas?.filter(
     (x) => x.titulo.toLocaleLowerCase().search(filtro) >= 0
   )
+  const execRolagem = (evt: React.WheelEvent) => {
+    // pega o container pai do objeto atual
+    const container = evt.currentTarget
+    // adiciona rolagem
+    container.scrollLeft += evt.deltaY
+    evt.preventDefault()
+  }
 
   // validacao
   if (isLoading) {
@@ -28,7 +35,7 @@ const ListaVagas = () => {
     return (
       <div>
         <FormVagas aoPesquisar={(termo: string) => setFiltro(termo)} />
-        <E.default>
+        <E.default onWheel={execRolagem}>
           {vagasFiltradas?.map((vag) => (
             <Vaga
               key={vag.id}
