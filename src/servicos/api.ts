@@ -10,7 +10,7 @@ const api = createApi({
   }),
   endpoints: (builder) => ({
     getCompetencias: builder.query<Competencia[], void>({
-      query: () => 'dados/competencias'
+      query: () => 'dados/competencias.json'
     })
   })
 })
