@@ -1,40 +1,56 @@
 // importacao
 import styled from 'styled-components'
 
+type props = {
+  tipo: 'lista' | 'matriz'
+  colunas?: number
+}
+
 // componentes
-const Vagas = styled.ul`
+const Vagas = styled.ul<props>`
   /* dispaly */
   display: grid;
-  grid-auto-flow: column;
-  grid-auto-columns: min-content;
   column-gap: 16px;
   /* dimensoes */
   margin-top: 80px;
-  overflow-x: auto;
-  white-space: nowrap;
   padding-bottom: 8px;
   /* estetico */
   cursor: pointer;
 
-  /* pseudo elementos: barra de rolagem */
-  &::-webkit-scrollbar {
-    margin-top: 32px;
-    height: 8px;
-  }
+  /* tipos objetos: lista / matriz */
+  ${(props) =>
+    props.tipo === 'lista'
+      ? `
+      grid-auto-flow: column;
+      grid-auto-columns: min-content;
+      // barra de rolagem
+      overflow-x: auto;
+      white-space: nowrap;
 
-  /* rastreio */
-  &::-webkit-scrollbar-track {
-    background-color: #f1f1f1;
-  }
+      /* pseudo elementos: barra de rolagem */
+      &::-webkit-scrollbar {
+        margin-top: 32px;
+        height: 8px;
+      }
 
-  /* polegar */
-  &::-webkit-scrollbar-thumb {
-    background-color: #888;
+      /* rastreio */
+      &::-webkit-scrollbar-track {
+        background-color: #f1f1f1;
+      }
 
-    &:hover {
-      background-color: #555;
-    }
-  }
+      /* polegar */
+      &::-webkit-scrollbar-thumb {
+        background-color: #888;
+
+        &:hover {
+          background-color: #555;
+        }
+      }
+    `
+      : `
+      grid-template-columns: repeat(${props.colunas}, 1fr);
+      gap: 16px;
+    `}
 `
 
 // exportacao
